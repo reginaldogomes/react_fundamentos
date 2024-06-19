@@ -36,24 +36,25 @@ function App() {
   const totalTasksCount = tasks.length
 
   return (
-    <React.Fragment>
+    <>
       <Header />
-      <div>
-        <h1>To-Do List</h1>
-        <TaskInput addTask={addTask} />
-        <TaskList
-          tasks={tasks}
-          toggleTaskCompletion={toggleTaskCompletion}
-          removeTask={removeTask}
-        />
-        <div>
-          Progress:{' '}
-          {totalTasksCount > 0
-            ? `${((completedTasksCount / totalTasksCount) * 100).toFixed(2)}%`
-            : '0%'}
+      <main className="flex justify-center min-h-screen relative">
+        <div className="w-[736px] absolute top-[-26px]">
+          <TaskInput addTask={addTask} />
+          <TaskList
+            tasks={tasks}
+            toggleTaskCompletion={toggleTaskCompletion}
+            removeTask={removeTask}
+          />
+          <div>
+            Progress:{' '}
+            {totalTasksCount > 0
+              ? `${((completedTasksCount / totalTasksCount) * 100).toFixed(2)}%`
+              : '0%'}
+          </div>
         </div>
-      </div>
-    </React.Fragment>
+      </main>
+    </>
   )
 }
 

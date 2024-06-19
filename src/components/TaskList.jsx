@@ -3,10 +3,11 @@ import React from 'react'
 
 function TaskList({ tasks, toggleTaskCompletion, removeTask }) {
   return (
-    <ul>
+    <ul className="flex flex-col">
       {tasks.map((task) => (
         <li key={task.id}>
           <input
+            className="p-8"
             type="checkbox"
             checked={task.completed}
             onChange={() => toggleTaskCompletion(task.id)}

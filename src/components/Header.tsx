@@ -1,6 +1,6 @@
 export const Header = () => {
   return (
-    <header className="bg-primary">
+    <header className="bg-primary flex justify-center items-center h-48">
       <svg
         width="126"
         height="48"
